@@ -20,5 +20,20 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# impeccable live runtime (config.json is committed)
+.impeccable/live/server.json
+.impeccable/live/sessions/
+
+# impeccable harness installs (local per machine)
+.agents/
+.claude/
+.cursor/
+.gemini/
+.opencode/
+
+# personal design context (created during the session, one per attendee)
+PRODUCT.md
+DESIGN.md
+
 # jetbrains setting folder
 .idea/
