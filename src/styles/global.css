@@ -1,2 +1,186 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+	themes: false;
+}
+
+/*
+ * NEUTRAL CANVAS — the design system starts here.
+ * Every token below is intentionally grey/system-default. This is the blank
+ * slate: define your palette, type, and feel live, and the showcase reskins.
+ * @theme registers tokens as Tailwind utilities; :root mirrors the colors so
+ * components can read them via var() in scoped styles.
+ */
+@theme {
+	--font-display: ui-serif, Georgia, "Times New Roman", serif;
+	--font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+
+	--color-bg: oklch(1 0 0);
+	--color-surface: oklch(0.975 0 0);
+	--color-ink: oklch(0.2 0 0);
+	--color-muted: oklch(0.48 0 0);
+	--color-line: oklch(0.88 0 0);
+	--color-primary: oklch(0.42 0 0);
+	--color-primary-hover: oklch(0.36 0 0);
+	--color-accent: oklch(0.72 0 0);
+	--color-accent-ink: oklch(0.28 0 0);
+	--color-coral: oklch(0.58 0 0);
+	--color-green: oklch(0.46 0 0);
+	--color-success: oklch(0.48 0 0);
+	--color-error: oklch(0.52 0 0);
+	--color-focus: oklch(0.55 0 0);
+
+	--space-xs: 0.25rem;
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-lg: 1.5rem;
+	--space-xl: 2.5rem;
+	--space-2xl: 4rem;
+	--space-3xl: 6rem;
+
+	--text-caption: 0.8125rem;
+	--text-secondary: 0.9375rem;
+	--text-body: 1rem;
+	--text-subheading: 1.125rem;
+	--text-heading: 1.5rem;
+	--text-display: clamp(2.25rem, 4vw + 1rem, 4.5rem);
+
+	--radius-sm: 0.25rem;
+	--radius-md: 0.5rem;
+	--radius-lg: 0.75rem;
+
+	--z-dropdown: 10;
+	--z-sticky: 20;
+	--z-modal-backdrop: 30;
+	--z-modal: 40;
+	--z-toast: 50;
+	--z-tooltip: 60;
+
+	--ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+	--duration-fast: 150ms;
+	--duration-normal: 220ms;
+}
+
+@layer base {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	:root {
+		--color-bg: oklch(1 0 0);
+		--color-surface: oklch(0.975 0 0);
+		--color-ink: oklch(0.2 0 0);
+		--color-muted: oklch(0.48 0 0);
+		--color-line: oklch(0.88 0 0);
+		--color-primary: oklch(0.42 0 0);
+		--color-primary-hover: oklch(0.36 0 0);
+		--color-accent: oklch(0.72 0 0);
+		--color-accent-ink: oklch(0.28 0 0);
+		--color-coral: oklch(0.58 0 0);
+		--color-green: oklch(0.46 0 0);
+		--color-success: oklch(0.48 0 0);
+		--color-error: oklch(0.52 0 0);
+		--color-focus: oklch(0.55 0 0);
+	}
+
+	html {
+		font-family: var(--font-body);
+		font-size: 100%;
+		color: var(--color-ink);
+		background-color: var(--color-bg);
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	body {
+		margin: 0;
+		min-height: 100dvh;
+		line-height: 1.6;
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-family: var(--font-display);
+		font-weight: 500;
+		line-height: 1.15;
+		text-wrap: balance;
+		letter-spacing: -0.02em;
+		margin: 0;
+	}
+
+	p {
+		margin: 0;
+		max-width: 65ch;
+		text-wrap: pretty;
+	}
+
+	a {
+		color: var(--color-primary);
+		text-underline-offset: 0.15em;
+	}
+
+	a:focus-visible,
+	button:focus-visible,
+	input:focus-visible,
+	select:focus-visible,
+	textarea:focus-visible {
+		outline: 2px solid var(--color-focus);
+		outline-offset: 3px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+}
+
+@layer utilities {
+	.font-display {
+		font-family: var(--font-display);
+	}
+
+	.font-body {
+		font-family: var(--font-body);
+	}
+
+	.text-muted {
+		color: var(--color-muted);
+	}
+
+	.text-caption {
+		font-size: var(--text-caption);
+		line-height: 1.5;
+	}
+
+	.text-secondary {
+		font-size: var(--text-secondary);
+	}
+
+	.text-body {
+		font-size: var(--text-body);
+	}
+
+	.text-subheading {
+		font-size: var(--text-subheading);
+		line-height: 1.4;
+	}
+
+	.text-heading {
+		font-size: var(--text-heading);
+		line-height: 1.25;
+	}
+
+	.text-display {
+		font-size: var(--text-display);
+		line-height: 1.08;
+		letter-spacing: -0.03em;
+	}
+}
