@@ -14,7 +14,7 @@ Set these up before we go live:
 | Requirement | Notes |
 | --- | --- |
 | [Cursor](https://cursor.com/) | Free tier is probably enough for the session |
-| [Impeccable](https://impeccable.style/) | We install it together during the session |
+| [Impeccable](https://impeccable.style/) | Already vendored in the repo — nothing to install |
 | [Cloudflare](https://www.cloudflare.com/) | Free tier is enough (used later in the session) |
 | Node.js 22+ | Required by Astro 6 |
 
@@ -53,13 +53,9 @@ Open [http://localhost:4321](http://localhost:4321). You'll see the **design-sys
 
 ### Impeccable
 
-We install Impeccable during the session. Each attendee builds their own design system, so `PRODUCT.md` and `DESIGN.md` stay local and are gitignored.
+Impeccable is **already vendored in this repo** (in `.claude` and `.cursor`) — nothing to install. Each attendee builds their own design system, so `PRODUCT.md` and `DESIGN.md` stay local and are gitignored.
 
-```sh
-npx impeccable skills install
-```
-
-Then in Cursor, after the mood board and AI interview:
+In Cursor, after the mood board and AI interview:
 
 ```text
 /impeccable init
