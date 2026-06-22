@@ -36,17 +36,21 @@ pnpm-debug.log*
 .gemini/
 .opencode/
 
-# Harness dirs ignored, EXCEPT our two shipped skills (must be present on clone).
+# Harness dirs ignored, EXCEPT the skills + Cursor rule shipped on clone:
+# our apply-system/publish-system AND vendored Impeccable, so there's no manual install.
 .claude/*
 !.claude/skills/
 .claude/skills/*
 !.claude/skills/apply-system/
 !.claude/skills/publish-system/
+!.claude/skills/impeccable/
 .cursor/*
 !.cursor/skills/
+!.cursor/rules/
 .cursor/skills/*
 !.cursor/skills/apply-system/
 !.cursor/skills/publish-system/
+!.cursor/skills/impeccable/
 
 # personal design context (created during the session, one per attendee)
 PRODUCT.md
