@@ -1,0 +1,13 @@
+# Vibe Coding Design System
+
+> A machine-readable design system. Read the files below, then apply the system
+> to any project in its own tech stack — using exact token values.
+
+- [System spec](/system.md): rules, voice, components, and the token reference
+- [Tokens](/tokens.json): exact color, type, spacing, radius, and motion values
+- [Tokens CSS](/tokens.css): drop-in :root custom properties for any web project
+
+## Apply
+
+Read /system.md and /tokens.json, then refactor or build a page to match —
+replacing ad-hoc styles with the system's tokens and following its rules.
