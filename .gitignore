@@ -3,6 +3,13 @@ dist/
 # generated types
 .astro/
 
+# generated agent layer (regenerated from global.css on every dev/build)
+public/tokens.json
+public/tokens.css
+public/system.md
+public/llms.txt
+public/v1/
+
 # dependencies
 node_modules/
 

@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "astro dev",
     "publish-system": "node scripts/publish-system.mjs",
-    "prebuild": "node scripts/publish-system.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
