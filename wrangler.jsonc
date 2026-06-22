@@ -1,0 +1,14 @@
+{
+	// This site is fully static — Astro builds to ./dist and Cloudflare serves it.
+	// No SSR adapter (@astrojs/cloudflare) is needed or wanted.
+	// Declaring the project here stops Cloudflare's build from auto-running
+	// `astro add cloudflare`, which injects the Workers SSR adapter and fails
+	// to install against Astro 6.
+	"name": "vibe-design-system",
+	"compatibility_date": "2026-06-22",
+	"assets": {
+		"directory": "./dist"
+	}
+	// If this is a classic Cloudflare *Pages* project (not Workers), remove the
+	// "assets" block above and use instead:  "pages_build_output_dir": "./dist"
+}
